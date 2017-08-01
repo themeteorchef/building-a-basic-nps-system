@@ -1,4 +1,4 @@
-#### Tutorial: Building Interactive Emails
+#### Tutorial: Building
 
 Description of this tutorial goes here. Used in your tutorial repo's README.md file.
 
