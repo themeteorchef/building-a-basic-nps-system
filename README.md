@@ -1,4 +1,4 @@
-#### Tutorial: Building a Basic NPS S
+#### Tutorial: Building a Basic NPS System
 
 Description of this tutorial goes here. Used in your tutorial repo's README.md file.
 
