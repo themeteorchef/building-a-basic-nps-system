@@ -2,13 +2,13 @@
 
 Description of this tutorial goes here. Used in your tutorial repo's README.md file.
 
-[Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/building-interactive-emails)  
+[Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/building-a-basic-nps-system)  
 
 [Download the source (.zip)](https://github.com/themeteorchef/building-interactive-emails/archive/master.zip)
 
 ---
 
-**Need help with this?** [Sign up for a Mentorship appointment](https://themeteorchef.com/mentorship?readme=building-interactive-emails) and get 1-on-1 help.
+**Need help with this?** [Sign up for a Mentorship appointment](https://themeteorchef.com/mentorship?readme=building-a-basic-nps-system) and get 1-on-1 help.
 
 ---
 
