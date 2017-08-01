@@ -1,6 +1,6 @@
 #### Tutorial: Building a Basic NPS System
 
-In this tutorial, we're going to learn how to build a rudimentary NPS system. We'll wire up an email to send out to users with the ability to offer up an NPS score along with a landing page for providing some additional, optional feedback. We'll also see how to display the data we receive from users and calculate an NPS score for our product.
+Description of this tutorial goes here. Used in your tutorial repo's README.md file.
 
 [Read this tutorial on The Meteor Chef](https://themeteorchef.com/tutorials/building-a-basic-nps-system)  
 
