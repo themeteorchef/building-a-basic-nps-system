@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Thanks for using {{applicationName}}</title>
+    <!--
+    The style block is collapsed on page load to save you some scrolling.
+    Postmark automatically inlines all CSS properties for maximum email client
+    compatibility. You can just update styles here, and Postmark does the rest.
+    -->
+    <style type="text/css" rel="stylesheet" media="all">
+    /* Base ------------------------------ */
+
+    *:not(br):not(tr):not(html) {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100% !important;
+      height: 100%;
+      margin: 0;
+      line-height: 1.4;
+      background-color: #Fafafa;
+      color: #74787E;
+      -webkit-text-size-adjust: none;
+    }
+
+    p,
+    ul,
+    ol,
+    blockquote {
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    a {
+      color: #3869D4;
+    }
+
+    a img {
+      border: none;
+    }
+
+    td {
+      word-break: break-word;
+    }
+    /* Layout ------------------------------ */
+
+    .email-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      -premailer-width: 100%;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+      background-color: #fafafa;
+    }
+
+    .email-content {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      -premailer-width: 100%;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+    }
+    /* Masthead ----------------------- */
+
+    .email-masthead {
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    .email-masthead_logo {
+      width: 94px;
+    }
+
+    .email-masthead_name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #bbbfc3;
+      text-decoration: none;
+    }
+    /* Body ------------------------------ */
+
+    .email-body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      -premailer-width: 100%;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+      border-top: 1px solid #EDEFF2;
+      border-bottom: 1px solid #EDEFF2;
+      background-color: #FFFFFF;
+    }
+
+    .email-body_inner {
+      width: 570px;
+      margin: 0 auto;
+      padding: 0;
+      -premailer-width: 570px;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+      background-color: #FFFFFF;
+    }
+
+    .email-footer {
+      width: 570px;
+      margin: 0 auto;
+      padding: 0;
+      -premailer-width: 570px;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+      text-align: center;
+    }
+
+    .email-footer p {
+      color: #AEAEAE;
+    }
+
+    .body-action {
+      width: 100%;
+      margin: 30px auto 0;
+      padding: 0;
+      -premailer-width: 100%;
+      -premailer-cellpadding: 0;
+      -premailer-cellspacing: 0;
+      text-align: center;
+    }
+
+    .body-sub {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #EDEFF2;
+    }
+
+    .content-cell {
+      padding: 30px 35px 35px;
+    }
+
+    .preheader {
+      display: none !important;
+      visibility: hidden;
+      mso-hide: all;
+      font-size: 1px;
+      line-height: 1px;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .score-buttons .score-button {
+      float: right;
+      margin: 0 2px;
+    }
+
+    .score-button .scale {
+      display: none;
+    }
+
+    .scale-labels {
+      padding-top: 10px;
+    }
+
+    /* Utilities ------------------------------ */
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+    /*Media Queries ------------------------------ */
+
+    @media only screen and (max-width: 600px) {
+      .email-body_inner,
+      .email-footer {
+        width: 100% !important;
+      }
+
+      .score-buttons a {
+        margin-bottom: 10px !important;
+      }
+
+      .score-buttons a.zero {
+        margin-bottom: 0px !important;
+      }
+
+      .score-button {
+        width: 100% !important;
+      }
+
+      .score-button.ten .scale,
+      .score-button.zero .scale {
+        display: inline;
+      }
+
+      .scale-labels {
+        display: none;
+
+      }
+    }
+
+    /* Buttons ------------------------------ */
+
+    .score-button {
+      background-color: #eee;
+      border-top: 10px solid #eee;
+      border-right: 15px solid #eee;
+      border-bottom: 10px solid #eee;
+      border-left: 15px solid #eee;
+      display: inline-block;
+      color: #666;
+      text-decoration: none;
+      border-radius: 3px;
+      box-shadow: 0 2px 0px rgba(0, 0, 0, 0.16);
+      -webkit-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.16);
+      -webkit-text-size-adjust: none;
+      text-align: center;
+    }
+    /* Type ------------------------------ */
+
+    h1 {
+      margin-top: 0;
+      color: #2F3133;
+      font-size: 19px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #2F3133;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #2F3133;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    p {
+      margin-top: 0;
+      color: #74787E;
+      font-size: 16px;
+      line-height: 1.5em;
+      text-align: left;
+    }
+
+    p.sub {
+      font-size: 12px;
+    }
+
+    p.center {
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <span class="preheader">Thank you for using {{applicationName}}.</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table class="email-content" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="email-masthead">
+                <a href="{{url}}" class="email-masthead_name">{{applicationName}}</a>
+              </td>
+            </tr>
+            <!-- Email Body -->
+            <tr>
+              <td class="email-body" width="100%" cellpadding="0" cellspacing="0">
+                <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0">
+                  <!-- Body content -->
+                  <tr>
+                    <td class="content-cell">
+                      <h1 class="align-center">Howdy!</h1>
+                      <p class="align-center">Thanks for using {{applicationName}}.</p>
+                      <p class="align-center"><strong>Can you let us know how likely you are to recommend {{applicationName}} to a friend</strong>?</p>
+                      <!-- Action -->
+                      <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center">
+                            <!-- Border based button
+                       https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td align="center">
+                                  <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="100%" class="score-buttons">
+                                        <a href="{{url}}scores/feedback?score=10&userId={{userId}}" class="score-button ten" target="_blank">10 <span class="scale">– Very likely</span></a>
+                                        <a href="{{url}}scores/feedback?score=9&userId={{userId}}" class="score-button" target="_blank">9</a>
+                                        <a href="{{url}}scores/feedback?score=8&userId={{userId}}" class="score-button" target="_blank">8</a>
+                                        <a href="{{url}}scores/feedback?score=7&userId={{userId}}" class="score-button" target="_blank">7</a>
+                                        <a href="{{url}}scores/feedback?score=6&userId={{userId}}" class="score-button" target="_blank">6</a>
+                                        <a href="{{url}}scores/feedback?score=5&userId={{userId}}" class="score-button" target="_blank">5</a>
+                                        <a href="{{url}}scores/feedback?score=4&userId={{userId}}" class="score-button" target="_blank">4</a>
+                                        <a href="{{url}}scores/feedback?score=3&userId={{userId}}" class="score-button" target="_blank">3</a>
+                                        <a href="{{url}}scores/feedback?score=2&userId={{userId}}" class="score-button" target="_blank">2</a>
+                                        <a href="{{url}}scores/feedback?score=1&userId={{userId}}" class="score-button" target="_blank">1</a>
+                                        <a href="{{url}}scores/feedback?score=0&userId={{userId}}" class="score-button zero" target="_blank">0 <span class="scale">– Not likely</span></a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <table class="scale-labels" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="50%">
+                                        <p class="align-left">Not likely</p>
+                                      </td>
+                                      <td width="50%">
+                                        <p class="align-right">Very likely</p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="content-cell" align="center">
+                      <p class="sub align-center">&copy; 2017 {{applicationName}}. All rights reserved.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
