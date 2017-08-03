@@ -48,13 +48,12 @@ Meteor.methods({
   'scores.requestFeedback': function scoresRequestFeedback() {
     try {
       const users = Meteor.users.find({ roles: { $in: ['user'] } }).fetch();
-      this.unblock();
       users.forEach(({ _id, emails }) => {
         Meteor.defer(() => {
           Email.send({
             to: emails[0].address,
             from: 'customers@themeteorchef.com',
-            subject: 'How like are you to refer The Meteor Chef to a friend?',
+            subject: 'How likely are you to refer The Meteor Chef to a friend?',
             html: templateToHTML(getPrivateFile('email-templates/nps.html'), {
               applicationName: 'The Meteor Chef',
               url: Meteor.absoluteUrl(),
@@ -64,7 +63,6 @@ Meteor.methods({
         });
       });
     } catch (exception) {
-      console.warn(exception);
       throw new Meteor.Error('500', exception);
     }
   },
